@@ -26,7 +26,7 @@ def run():
 
   if (buttonExists is True): 
     print("Deploy to Azure button already exists")
-    print(f"::set-output name=fileUpdated::falsee")
+    print(f"::set-output name=fileUpdated::'false'")
   else:
     publicFileUrl = f"https://raw.githubusercontent.com/{repositoryName}/{branchName}/{templatePath}"
     print(f"Add button for {publicFileUrl}")
@@ -38,7 +38,7 @@ def run():
       lines = "".join(lines)
       file.writelines(lines)
 
-    print(f"::set-output name=fileUpdated::true")
+    print(f"::set-output name=fileUpdated::'true'")
     
 if __name__ == "__main__":
   run()
