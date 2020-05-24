@@ -6,7 +6,7 @@ LABEL maintainer="Wilfried Woivré <wilfried.woivre@gmail.com>"
 
 LABEL "com.github.actions.name"="Deploy to Azure Button"
 LABEL "com.github.actions.description"="Add deploy to Azure button to your markdown file"
-LABEL "com.github.actions.actions.icon"="activity"
+LABEL "com.github.actions.actions.icon"="award"
 LABEL "com.github.actions.color"="blue"
 
 RUN mkdir -p /usr/src/app

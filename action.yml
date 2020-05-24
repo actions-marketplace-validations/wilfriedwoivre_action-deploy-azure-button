@@ -1,6 +1,9 @@
 name: Deploy to Azure Button
 author: wilfriedwoivre
 description: Add deploy to Azure button to markdown file
+branding:
+  icon: 'award'  
+  color: 'blue'
 inputs:
   markdownPath:
     description: 'Path to markdown file to edit'
@@ -20,4 +23,3 @@ runs:
     - ${{ inputs.markdownPath }}
     - ${{ inputs.templatePath }}
     - ${{ inputs.githubToken }}
-    
