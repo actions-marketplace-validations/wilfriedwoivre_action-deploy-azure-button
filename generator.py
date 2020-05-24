@@ -6,14 +6,14 @@ def run():
   templatePath = os.getenv("templatePath")
 
   if (os.path.exists(markdownPath)): 
-    print(f"Markdown Path {markdownPath} exists)")
+    print(f"Markdown Path {markdownPath} exists")
   else:
-    raise Exception(f"Markdown Path {markdownPath} not found)")
+    raise Exception(f"Markdown Path {markdownPath} not found")
   
   if (os.path.exists(templatePath)): 
     print(f"Markdown Path {templatePath} exists)")
   else:
-    raise Exception(f"Markdown Path {templatePath} not found)")
+    raise Exception(f"Markdown Path {templatePath} not found")
 
 if __name__ == "__main__":
   run()
