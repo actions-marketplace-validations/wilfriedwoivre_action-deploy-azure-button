@@ -23,4 +23,4 @@ runs:
   env:
     markdownPath: ${{ inputs.markdownPath }}
     templatePath: ${{ inputs.templatePath }}
-    repositoryName: $GITHUB_REPOSITORY
+    repositoryName: ${{ GITHUB_REPOSITORY }}
