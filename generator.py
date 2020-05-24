@@ -1,7 +1,6 @@
 import os
 import io
 import urllib.parse
-import sys
 
 def run():
   markdownPath = os.getenv("markdownPath")
@@ -27,7 +26,6 @@ def run():
 
   if (buttonExists is True): 
     print("Deploy to Azure button already exists")
-    sys.stdout.write("::set-output name=fileUpdated::false")
   else:
     publicFileUrl = f"https://raw.githubusercontent.com/{repositoryName}/{branchName}/{templatePath}"
     print(f"Add button for {publicFileUrl}")
@@ -39,7 +37,7 @@ def run():
       lines = "".join(lines)
       file.writelines(lines)
 
-    sys.stdout.write("::set-output name=fileUpdated::true")
+  print(f"::set-output name=fileUpdated::{not buttonExists}")
 
 if __name__ == "__main__":
   run()
