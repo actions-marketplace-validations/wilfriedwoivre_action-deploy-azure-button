@@ -5,7 +5,7 @@ from github import Github
 def run():
   markdownPath = os.getenv("markdownPath")
   templatePath = os.getenv("templatePath")
-  repositoryName = os.getenv("repositoryName")
+  repositoryName = os.getenv("GITHUB_REPOSITORY")
 
   if (os.path.isfile(markdownPath)): 
     print(f"Markdown Path {markdownPath} exists")
