@@ -13,13 +13,13 @@ inputs:
     description: 'Path for ARM Template file'
     required: false
     default: 'azuredeploy.json'
-  githubToken:
-    description: 'Github Token'
-    required: true
+outputs:
+  fileUpdated: 
+    description: 'Boolean if file is updated'
+    default: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.markdownPath }}
     - ${{ inputs.templatePath }}
-    - ${{ inputs.githubToken }}
