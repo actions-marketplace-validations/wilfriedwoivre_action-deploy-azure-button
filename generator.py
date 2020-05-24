@@ -14,7 +14,7 @@ def run():
     raise Exception(f"Markdown Path {markdownPath} not found")
   
   if (os.path.isfile(templatePath)): 
-    print(f"Markdown Path {templatePath} exists)")
+    print(f"Markdown Path {templatePath} exists")
   else:
     raise Exception(f"Markdown Path {templatePath} not found")
 
