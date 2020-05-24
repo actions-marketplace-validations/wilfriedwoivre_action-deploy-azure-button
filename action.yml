@@ -13,6 +13,10 @@ inputs:
     description: 'Path for ARM Template file'
     required: false
     default: 'azuredeploy.json'
+  branchName: 
+    description: 'Target branch name for deployment'
+    required: false
+    default: 'master'
 outputs:
   fileUpdated: 
     description: 'Boolean if file is updated'
@@ -23,3 +27,4 @@ runs:
   env:
     markdownPath: ${{ inputs.markdownPath }}
     templatePath: ${{ inputs.templatePath }}
+    branchName: ${{ inputs.branchName }}
