@@ -31,7 +31,7 @@ def run():
     publicFileUrl = f"https://raw.githubusercontent.com/{repositoryName}/{branchName}/{templatePath}"
     print(f"Add button for {publicFileUrl}")
     encodedPublicFileUrl = urllib.parse.quote(publicFileUrl, safe='')
-    lineToWrite = f"[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/{encodedPublicFileUrl})"
+    lineToWrite = f"[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/{encodedPublicFileUrl})\n"
 
     with open(markdownPath, 'w') as file: 
       lines.insert(2, lineToWrite)
