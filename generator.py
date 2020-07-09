@@ -18,13 +18,13 @@ def run():
   else:
     raise Exception(f"Markdown Path {templatePath} not found")
 
-  buttonExists = False
+  matching = False
   lines = []
   with open(markdownPath, 'r') as file:
     lines = file.readlines()
-    buttonExists = lines.__contains__("https://aka.ms/deploytoazurebutton")
+    matching = [s for s in lines if "https://aka.ms/deploytoazurebutton" in s]
 
-  if (buttonExists is True): 
+  if (len(matching) !== 0): 
     print("Deploy to Azure button already exists")
     print(f"::set-output name=fileUpdated::false")
   else:
