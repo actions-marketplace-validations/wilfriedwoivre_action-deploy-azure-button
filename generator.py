@@ -24,7 +24,7 @@ def run():
     lines = file.readlines()
     matching = [s for s in lines if "https://aka.ms/deploytoazurebutton" in s]
 
-  if (len(matching) !== 0): 
+  if (len(matching) != 0): 
     print("Deploy to Azure button already exists")
     print(f"::set-output name=fileUpdated::false")
   else:
