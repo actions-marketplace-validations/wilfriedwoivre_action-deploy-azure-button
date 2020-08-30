@@ -20,7 +20,6 @@ inputs:
 outputs:
   fileUpdated: 
     description: 'Boolean if file is updated'
-    default: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
