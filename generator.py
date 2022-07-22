@@ -6,6 +6,7 @@ def run():
   markdownPath = os.getenv("markdownPath")
   templatePath = os.getenv("templatePath")
   branchName = os.getenv("branchName")
+  targetAzureUrl = os.getenv("targetAzureUrl")
   repositoryName = os.getenv("GITHUB_REPOSITORY")
 
   if (os.path.isfile(markdownPath)): 
@@ -31,7 +32,7 @@ def run():
     publicFileUrl = f"https://raw.githubusercontent.com/{repositoryName}/{branchName}/{templatePath}"
     print(f"Add button for {publicFileUrl}")
     encodedPublicFileUrl = urllib.parse.quote(publicFileUrl, safe='')
-    lineToWrite = f"[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/{encodedPublicFileUrl})\n"
+    lineToWrite = f"[![Deploy to Azure](https://aka.ms/deploytoazurebutton)]({targetAzureUrl}{encodedPublicFileUrl})\n"
 
     with open(markdownPath, 'w') as file: 
       lines.insert(2, lineToWrite)

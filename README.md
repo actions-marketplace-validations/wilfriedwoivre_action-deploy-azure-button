@@ -22,6 +22,9 @@ Only update local files, you must push your code after update.
 | templatePath | false | azuredeploy.json
 | markdownPath | false | README.md
 | branchName | false | master
+| targetAzureUrl | false | https://portal.azure.com/#create/Microsoft.Template/uri/
+
+To deploy Azure policy override the targetAzureUrl with this value : https://portal.azure.com/#blade/Microsoft_Azure_Policy/CreatePolicyDefinitionBlade/uri/
 
 ## Output
 

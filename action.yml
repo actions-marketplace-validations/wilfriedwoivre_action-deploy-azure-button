@@ -16,7 +16,11 @@ inputs:
   branchName: 
     description: 'Target branch name for deployment'
     required: false
-    default: 'master'
+    default: 'main'
+  targetAzureUrl:
+    description: 'Target Azure url for deployment'
+    required: false
+    default: 'https://portal.azure.com/#create/Microsoft.Template/uri/'
 outputs:
   fileUpdated: 
     description: 'Boolean if file is updated'
